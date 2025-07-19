@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
         `}>
           <a 
-            href="https://github.com/your-github" 
+            href="https://github.com/Cosmasrono" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 transition-colors"
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             GitHub
           </a>
           <a 
-            href="https://linkedin.com/in/your-linkedin" 
+            href="https://www.linkedin.com/in/cosmas-cheruiyot-a95a3122b/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 transition-colors"
