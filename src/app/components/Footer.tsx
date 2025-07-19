@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center space-x-6 mb-6">
           <a 
-            href="https://github.com/your-github-username" 
+            href="https://github.com/Cosmasrono" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             GitHub
           </a>
           <a 
-            href="https://linkedin.com/in/your-linkedin-username" 
+            href="https://www.linkedin.com/in/cosmas-cheruiyot-a95a3122b/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-indigo-400 transition-colors duration-300"

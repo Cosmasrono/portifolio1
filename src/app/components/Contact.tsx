@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 dark:text-white">Phone</h4>
-                    <p className="text-gray-600 dark:text-gray-300">+254 123 456 789</p>
+                    <p className="text-gray-600 dark:text-gray-300">+254 757-450-716</p>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 dark:text-white">Location</h4>
@@ -100,9 +100,9 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h3>
                 <div className="flex space-x-4">
                   {[
-                    { platform: 'LinkedIn', url: 'https://linkedin.com/in/your-profile' },
-                    { platform: 'GitHub', url: 'https://github.com/your-username' },
-                    { platform: 'Twitter', url: 'https://twitter.com/your-profile' },
+                    { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/cosmas-cheruiyot-a95a3122b/' },
+                    { platform: 'GitHub', url: 'https://github.com/Cosmasrono' },
+                    // { platform: 'Twitter', url: 'https://twitter.com/your-profile' },
                   ].map((social) => (
                     <a
                       key={social.platform}

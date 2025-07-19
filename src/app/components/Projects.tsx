@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
       title: 'West Pokot Marketplace',
       category: 'Web Application',
       description: 'An online marketplace for local vendors in West Pokot.',
-      imageId: '/images/1.png',
+      imageId: '/images/image.png',
       alt: 'West Pokot Marketplace interface',
       fallbackImage: '/images/fallback.jpg',
       githubLink: '',
