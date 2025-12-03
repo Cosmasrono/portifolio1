@@ -68,6 +68,18 @@ const Projects: React.FC = () => {
       isPrivate: false,
       technologies: ['Laravel', 'Business Central', 'MSSQL'],
     },
+    {
+      // nzoberi schools integration
+      title: 'Nzoberi Schools Integration',
+      category: 'Web Application',
+      description: 'Integration of Nzoberi Schools with the EACC Recruitment System to automate the school management process.',
+      imageId: '/images/10.png',
+      alt: 'Nzoberi Schools Integration',
+      fallbackImage: '/images/fallback.jpg',
+      githubLink: 'https://github.com/Cosmasrono/nzoberi-schools-integration',
+      isPrivate: false,
+        technologies: ['Laravel', 'Business Central', 'MSSQL'],
+      }
   ];
 
   const handleImageError = (index: number) => {
