@@ -58,15 +58,15 @@ const Projects: React.FC = () => {
       featured: true,
     },
     {
-      title: 'E-Commerce Platform',
+      title: 'Bolt food Integration',
       category: 'Web Application',
-      description: 'Modern e-commerce solution with real-time inventory, payment processing, and order management.',
+      description: 'Integration of Bolt food with the EACC Recruitment System to automate the recruitment process.',
       imageId: '/images/1.png',
-      alt: 'E-Commerce Platform',
+      alt: 'Bolt food Integration',
       fallbackImage: '/images/fallback.jpg',
-      githubLink: 'https://github.com/Cosmasrono/cake-site',
+      githubLink: 'https://github.com/Cosmasrono/bolt-food-integration',
       isPrivate: false,
-      technologies: ['Next.js', 'Node.js', 'MongoDB'],
+      technologies: ['Laravel', 'Business Central', 'MSSQL'],
     },
   ];
 
