@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
     {
       title: 'Bolt food Integration',
       category: 'Web Application',
-      description: 'Integration of Bolt food with the EACC Recruitment System to automate the recruitment process.',
+      description: 'Integration of Bolt food with cake site to automate the food delivery process.',
       imageId: '/images/9.png',
       alt: 'Bolt food Integration',
       fallbackImage: '/images/fallback.jpg',
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
       // nzoberi schools integration
       title: 'Nzoberi Schools Integration',
       category: 'Web Application',
-      description: 'Integration of Nzoberi Schools with the EACC Recruitment System to automate the school management process.',
+      description: 'Integration of Nzoberi Schools with the school management system ',
       imageId: '/images/10.png',
       alt: 'Nzoberi Schools Integration',
       fallbackImage: '/images/fallback.jpg',
