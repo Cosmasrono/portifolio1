@@ -61,7 +61,7 @@ const Projects: React.FC = () => {
       title: 'Bolt food Integration',
       category: 'Web Application',
       description: 'Integration of Bolt food with the EACC Recruitment System to automate the recruitment process.',
-      imageId: '/images/1.png',
+      imageId: '/images/9.png',
       alt: 'Bolt food Integration',
       fallbackImage: '/images/fallback.jpg',
       githubLink: 'https://github.com/Cosmasrono/bolt-food-integration',
