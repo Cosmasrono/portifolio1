@@ -79,7 +79,7 @@ const Resume: React.FC = () => {
 
           <div className="flex justify-center mb-8">
             <a
-              href="/Cosmas_Cheruiyot_CV.pdf"
+              href="/images/assets/COSMAS CHERUIYOT TIONGIK.pdf"
               download
               onClick={trackDownload}
               className="bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white px-8 py-3 rounded-md font-semibold transition-transform duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
@@ -94,7 +94,7 @@ const Resume: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">CV Preview</h3>
               <div className="overflow-auto max-h-[600px] border border-gray-300 dark:border-gray-600 rounded-lg">
                 <Document
-                  file="/Cosmas_Cheruiyot_CV.pdf"
+                  file="/images/assets/COSMAS CHERUIYOT TIONGIK.pdf"
                   onLoadSuccess={onDocumentLoadSuccess}
                   className="w-full"
                 >

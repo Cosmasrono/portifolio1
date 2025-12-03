@@ -2,14 +2,22 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
   const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  // Ensure component is mounted to avoid hydration mismatches
   useEffect(() => {
     setMounted(true);
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleTheme = () => {
@@ -26,53 +34,79 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // Prevent rendering until mounted to avoid hydration errors
   if (!mounted) {
     return null;
   }
 
   return (
-    <nav className="fixed w-full z-50 top-0 left-0 bg-transparent backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-4">
-          <h1 className="text-gray-800 dark:text-white text-xl font-bold">
-            Cosmas Cheruiyot
-          </h1>
-        </div>
-        
-        <div className="flex items-center space-x-6">
-          <button 
-            onClick={() => scrollToSection('hero')} 
-            className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-          >
-            Home
-          </button>
-          <button 
-            onClick={() => scrollToSection('projects')} 
-            className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-          >
-            Projects
-          </button>
-          <button 
-            onClick={() => scrollToSection('skills')} 
-            className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-          >
-            Skills
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-          >
-            Contact
-          </button>
-          
+    <nav className={`fixed w-full z-50 top-0 transition-all duration-300 ${scrolled
+      ? 'bg-white/80 dark:bg-gray-950/80 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800'
+      : 'bg-transparent'
+      }`}>
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
           <button
-            onClick={toggleTheme}
-            className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            onClick={() => scrollToSection('hero')}
+            className={`text-xl font-bold transition-colors ${scrolled
+              ? 'text-gray-900 dark:text-white'
+              : 'text-gray-900 dark:text-white'
+              }`}
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            Cosmas.dev
           </button>
+
+          {/* Navigation */}
+          <div className="flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8">
+              <button
+                onClick={() => scrollToSection('about')}
+                className={`font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-500 ${scrolled
+                  ? 'text-gray-600 dark:text-gray-400'
+                  : 'text-gray-600 dark:text-gray-400'
+                  }`}
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className={`font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-500 ${scrolled
+                  ? 'text-gray-600 dark:text-gray-400'
+                  : 'text-gray-600 dark:text-gray-400'
+                  }`}
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('skills')}
+                className={`font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-500 ${scrolled
+                  ? 'text-gray-600 dark:text-gray-400'
+                  : 'text-gray-600 dark:text-gray-400'
+                  }`}
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 text-white font-medium px-6 py-2 rounded-lg transition-all shadow-lg hover:shadow-emerald-500/50"
+              >
+                Contact
+              </button>
+            </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <FaSun className="text-xl text-gray-400" />
+              ) : (
+                <FaMoon className="text-xl text-gray-600" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </nav>
